@@ -1,0 +1,32 @@
+<div class="ui container">
+  <div class="ui cards">
+    
+    <!-- Repeat for every cheese -->
+
+    <div 
+      *ngFor="let cheese of cheeses"
+      class="card">
+      <div class="ui medium image">
+        <img src={{cheese.imagePath}}>
+      </div>
+      <div class="content">
+        <!-- <img class="right floated medium ui image" src={{cheese.imagePath}}> -->
+        <div class="header">
+          {{cheese.name}}
+        </div>
+        <div class="meta">
+          {{cheese.type}}
+        </div>
+        <div class="description">
+          {{cheese.description}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <div class="ui primary yellow button">View</div>
+          <div class="ui button">Edit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
